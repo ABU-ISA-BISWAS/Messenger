@@ -8,6 +8,7 @@ function App() {
      <p>isa</p>
      <p>my wrllksdkj</p>
      <p>hello world</p>
+     <p>hello from kawsar</p>
      
     </div>
   );
