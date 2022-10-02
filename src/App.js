@@ -6,11 +6,7 @@ function App() {
     <div className="App">
      <p>messenger</p>
      <p>isa</p>
-     <p>my wrllksdkj</p>
-     <p>hello world</p>
-     <p>hello from kawsar</p>
-     <p>hello from kawsar</p>
-     <p>hello from kawsar3</p>
+     <p>shovon</p>
      
     </div>
   );
