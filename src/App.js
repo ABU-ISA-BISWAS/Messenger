@@ -8,9 +8,7 @@ function App() {
      <p>isa</p>
      <p>my wrllksdkj</p>
      <p>hello world</p>
-     <p>hello from kawsar</p>
-     <p>hello from kawsar</p>
-     <p>hello from kawsar3</p>
+    <span>pull request from kawsar</span>
      
     </div>
   );
