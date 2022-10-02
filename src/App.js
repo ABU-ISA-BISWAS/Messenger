@@ -9,6 +9,8 @@ function App() {
      <p>my wrllksdkj</p>
      <p>hello world</p>
      <p>hello from kawsar</p>
+     <p>hello from kawsar</p>
+     <p>hello from kawsar</p>
      
     </div>
   );
