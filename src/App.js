@@ -11,6 +11,9 @@ function App() {
       <span>git setup has been completed</span>
       <span>git setup has been completed</span>
      </div>
+     <p>my wrllksdkj</p>
+     <p>hello world</p>
+    <span>pull request from kawsar</span>
      
     </div>
   );
