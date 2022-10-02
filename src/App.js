@@ -10,6 +10,8 @@ function App() {
       <span>git setup has been completed</span>
       <span>git setup has been completed</span>
       <span>git setup has been completed</span>
+      <span>git setup has been completed</span>
+      <span>git setup has been completed</span>
      </div>
      
     </div>
