@@ -1,13 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './Pages/Login';
+import { Link, Route, Routes } from 'react-router-dom';
+import SignUp from './Pages/SignUp';
 
 function App() {
   return (
     <div className="App">
-     <p>messenger</p>
-     <p>isa</p>
-     <p>shovon1</p>
-     
+      <Link to="/login">Login</Link>
+      <br/>
+      <Link to="/signUp">Signup</Link>
+      
+     <Routes>
+      <Route path='login' element={<Login></Login>}></Route>
+      <Route path='signUp' element={<SignUp></SignUp>}></Route>
+     </Routes>
      
     </div>
   );
