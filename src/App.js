@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Login from './Pages/Login';
+import {  Link, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-     <p>messenger</p>
-     <p>isa</p>
-     <p>my wrllksdkj</p>
-     <p>hello world</p>
-    <span>pull request from kawsar</span>
+    <div className="App ">
+      <Link to="/login" >login here</Link>
+    <Routes>
+<Route path='login' element={<Login></Login>}></Route>
+    </Routes>
      
     </div>
   );
