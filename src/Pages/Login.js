@@ -13,6 +13,7 @@ const Login = () => {
                 <input type="file" placeholder="Select file"  /> 
                 <button>Sign up</button>
       
+      
             </form>
             <p>Do you have an account ? login</p>
         </div>
