@@ -1,17 +1,18 @@
 import './App.css';
+import './Pages/style.css';
 import Login from './Pages/Login';
 import { Link, Route, Routes } from 'react-router-dom';
-import SignUp from './Pages/SignUp';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Link to="/login">Login</Link>
-      <Link to="/signUp">Signup</Link>
-     <Routes>
-      <Route path='login' element={<Login></Login>}></Route>
-      <Route path='signUp' element={<SignUp></SignUp>}></Route>
-     </Routes>
+    <div className="App ">
+      <Link to="/login" >login here</Link>
+    <Routes>
+<Route path='login' element={<Login></Login>}></Route>
+    </Routes>
      
     </div>
   );
