@@ -1,10 +1,6 @@
 import './App.css';
-import './Pages/style.css';
 import Login from './Pages/Login';
 import { Link, Route, Routes } from 'react-router-dom';
-
-
-
 
 function App() {
   return (

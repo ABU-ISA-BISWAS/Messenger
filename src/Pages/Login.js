@@ -1,22 +1,23 @@
 import React from 'react';
+import './login.css';
 
 const Login = () => {
     return (
      
         <div className="formContainer ">
         <div className="formWrapper">
-            <span className="logo" >My chat</span>
-            <span className="title" >Login</span>
+            <span className="logo font-sans" >My chat</span>
+            
             <form>
                 
                
-                <input type="email" placeholder="email"/>
+                <input className='p-1 rounded-sm border-blue-500 border-2' type="email" placeholder="email"/>
              
-                <input type="password" placeholder="password"  />
+                <input className='p-1 rounded-sm border-blue-500 border-2 input-xs' type="password" placeholder="password"  />
               
                 
                 
-                <button>Login</button>
+                <button className='w-full bg-blue-600 rounded-sm p-2 text-white font-semibold'>Login</button>
       
 
             </form>
