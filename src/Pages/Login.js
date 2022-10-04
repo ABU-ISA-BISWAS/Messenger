@@ -3,6 +3,7 @@ import React from 'react';
 const Login = () => {
     return (
      
+       
         <div className="formContainer ">
         <div className="formWrapper">
             <span className="logo" >My chat</span>
@@ -10,9 +11,9 @@ const Login = () => {
             <form>
                 
                
-                <input type="email" placeholder="email"/>
+                <input className='p-1' type="email" placeholder="email"/>
              
-                <input type="password" placeholder="password"  />
+                <input className='p-1' type="password" placeholder="password"  />
               
                 
                 
@@ -23,7 +24,6 @@ const Login = () => {
             <p>don't you have an account ? Register</p>
         </div>
     </div>
-       
     );
 };
 
