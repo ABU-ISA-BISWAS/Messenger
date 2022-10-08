@@ -1,5 +1,5 @@
 .formContainer{
-   background-color: #a7bcff; 
+   background-color: #09f1f1;; 
    height: 100vh;
    display: flex;
   align-items: center;
@@ -9,12 +9,12 @@
 }
 
  .formWrapper{
-  background-color: #acffff;
-  padding:20px 60px;
+  background-color: white;
+  padding:20px 30px;
    border-radius:10px;
    display:flex;
    flex-direction:column;
-   gap: 10px;
+   gap: 5px;
    align-items: center;
    justify-content: center; 
  
@@ -23,12 +23,13 @@ form{
   display:flex;
   flex-direction:column;
   gap: 15px;
+  
 }
   .logo{
     
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bolder;
-    color: green;
+    color: #09f1f1;
   }
   .title{
     
@@ -37,15 +38,3 @@ form{
     color: blue;
   }
   
-  
-  button{
-    border-radius:10px;
-    padding: 6px;
-    border: 3px red;
-    align-items: center;
-    justify-content: center; 
-    display:flex;
-    font-weight:bolder;
-    color: rgb(224, 224, 240);
-    background-color: blue;
-  }
