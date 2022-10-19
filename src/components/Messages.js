@@ -6,6 +6,8 @@ const Messages = () => {
         <div className="messages">
       
         <Message />
+        <Message />
+        <Message />
       
       
     </div>

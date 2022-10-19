@@ -1,23 +1,42 @@
 import './App.css';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import { Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import './Style.scss';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
+
+  const { currentUser } = useContext(AuthContext);
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children
+  };
+
   return (
-    <div className="App ">
-      <Link to="/login" >login  </Link>
-      <Link to="/signUp" >  signUp  </Link>
-      <Link to="/home" >  Home</Link>
-    <Routes>
-<Route path='login' element={<Login></Login>}></Route>
-<Route path='signUp' element={<SignUp></SignUp>}></Route>
-<Route path='home' element={<Home></Home>}></Route>
-    </Routes>
-     
-    </div>
+    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route
+            index
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
