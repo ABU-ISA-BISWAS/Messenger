@@ -5,6 +5,8 @@ import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+import messenger from "../img/messenger.png"
+
 const SignUp = () => {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -58,8 +60,17 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="formContainer">
-      <div className="formWrapper">
+   <div className="login">
+     <div className=' signUpHeading '>
+            <img className='h-24 w-24' src={messenger} alt="" />
+            
+            </div>
+     <div className="signupFormContainer">
+      
+           
+           
+      
+      <div className="signupFormWrapper">
         <span className="logo">My Chat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
@@ -80,6 +91,8 @@ const SignUp = () => {
         </p>
       </div>
     </div>
+    
+   </div>
   );
 };
 

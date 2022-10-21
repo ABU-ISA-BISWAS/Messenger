@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import messenger from "../img/messenger.png"
+import Footer from '../components/Footer';
 
 
 const Login = () => {
@@ -28,8 +30,18 @@ const Login = () => {
     };
     return (
 
-        <div className="formContainer ">
+        <div className='login'>
+            
+            <div className='text-center text-4xl text-gray-700  heading '>
+            <img className='h-24 w-24' src={messenger} alt="" />
+            <p >Connect with your friends</p>
+            </div>
+           
+            <div className="formContainer ">
+           
+           
             <div className="formWrapper">
+            
                 <span className="logo font-sans" >My chat</span>
 
                 <form onSubmit={handleSubmit}>
@@ -47,6 +59,8 @@ const Login = () => {
                 </form>
                 <p>don't you have an account ? <Link to="/signUp">Register</Link></p>
             </div>
+        </div>
+        <Footer></Footer>
         </div>
 
     );

@@ -7,6 +7,8 @@ import './Style.scss';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 
+
+
 function App() {
 
   const { currentUser } = useContext(AuthContext);
@@ -34,9 +36,13 @@ function App() {
           />
           <Route path="login" element={<Login />} />
           <Route path="signUp" element={<SignUp />} />
+          
         </Route>
+        
       </Routes>
+     
     </BrowserRouter>
+    
   );
 }
 
