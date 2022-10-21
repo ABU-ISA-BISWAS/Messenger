@@ -11,8 +11,7 @@ const Message = ({ message }) => {
     useEffect(() => {
       ref.current?.scrollIntoView({ behavior: "smooth" });
     }, [message]);
-    const cDate = new Date().toLocaleDateString();
-    const cTime = new Date().toLocaleTimeString();
+  
     
   
     return (
@@ -31,10 +30,13 @@ const Message = ({ message }) => {
           />
           <span>{message.cTime}</span>
         </div>
-        <div className="messageContent">
+       {message.img? <div className="messageContent">
+         
+          <img src={message.img} alt="" />
+          
+        </div>: <div className="messageContent">
           <p>{message.text}</p>
-          {message.img && <img src={message.img} alt="" />}
-        </div>
+        </div>}
       </div>
     );
 };
