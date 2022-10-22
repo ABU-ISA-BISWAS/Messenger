@@ -3,6 +3,11 @@
       @content;
     }
   }
+  @mixin MiniMobile {
+    @media screen and (max-height: 550px) {
+      @content;
+    }
+  }
   @mixin tablet {
     @media screen and (max-width: 768px) {
       @content;
@@ -14,6 +19,18 @@
     }
     
   }
+  @include MiniMobile {
+    .footer{
+      
+      img{
+        display: none;
+      }
+      p{
+        display: none;
+      }
+    }
+
+   }
   .footer{
     display: flex;
     justify-content: center;
