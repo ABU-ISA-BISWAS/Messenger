@@ -9,14 +9,16 @@
     }
   }
   @mixin laptop {
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 769px) {
       @content;
     }
+    
   }
   .footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    position:sticky;
   }
   .login{
     background-color: white;
@@ -27,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
  
  }
  .signUpHeading{
@@ -54,7 +57,10 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    height: 70vh;
+    height: 75vh;
+    @include mobile {
+      border: none;
+     }
 
     .logo {
       color: #0890f8ee;
@@ -135,7 +141,10 @@
       flex-direction: column;
       gap: 10px;
       align-items: center;
-      height: 48vh;
+      height: 55vh;
+      @include mobile {
+        border: none;
+       }
   
       .logo {
         color: #0890f8ee;
@@ -195,6 +204,16 @@
       }
     }
   }
+  @include laptop {
+    .openSidebar{
+      display: none;
+    }
+   }
+  @include mobile {
+    .sidebar{
+      display: none;
+    }
+   }
   
   .home {
     background-color: #60baffee;
@@ -213,15 +232,23 @@
       @include tablet {
        width: 90%;
       }
+     
   
       .sidebar {
         flex: 1;
         background-color: #0a2150ee;
         position: relative;
-  
+        @include mobile {
+        
+          position:relative;
+       
+        
+       }
+      
         .navbar {
           display: flex;
           align-items: center;
+          background-color: #03010eee;
           background-color: #0b204aee;
           height: 50px;
           padding: 10px;
@@ -257,10 +284,7 @@
               
              
               cursor: pointer;
-              @include tablet {
-                position: absolute;
-                bottom: 10px;
-              }
+              
             }
           }
         }
@@ -269,18 +293,22 @@
   
           .searchForm {
             padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
   
             input {
               background-color: transparent;
               border: none;
               color: white;
               outline: none;
-              
-  
+          
               &::placeholder {
                 color: lightgray;
               }
             }
+           
+           
           }
         }
   
@@ -292,10 +320,10 @@
           color: white;
           cursor: pointer;
   
-          &:hover {
-            background-color: #60baffee;
+          &:active {
+            background-color: #60baffee; 
           }
-  
+
           img {
             width: 50px;
             height: 50px;
@@ -313,9 +341,22 @@
               color: lightgray;
             }
           }
+          // @include mobile {
+          //   .userChatInfo {
+          //     display: none;
+          //   }
+          //  }
         }
       }
+     
+      // .userChatClick{
+      //   display: none;
+        
+      // }
+     
+ 
       .chat {
+       
         flex: 2;
         .userPP{
           display: flex;
@@ -323,7 +364,7 @@
           justify-content: space-between;
           
         }
-  
+ 
         .chatInfo {
           height: 50px;
           background-color: #153678ee;

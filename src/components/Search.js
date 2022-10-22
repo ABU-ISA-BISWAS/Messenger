@@ -20,7 +20,8 @@ const Search = () => {
   
     const { currentUser } = useContext(AuthContext);
   
-    const handleSearch = async () => {
+    const handleSearch = async (e) => {
+      e.preventDefault();
       const q = query(
         collection(db, "users"),
         where("displayName", "==", username)
@@ -36,9 +37,9 @@ const Search = () => {
       }
     };
   
-    const handleKey = (e) => {
-      e.code === "Enter" && handleSearch();
-    };
+    // const handleKey = (e) => {
+    //   e.code === "Enter" && handleSearch();
+    // };
   
     const handleSelect = async () => {
       //check whether the group(chats in firestore) exists, if not create
@@ -79,10 +80,21 @@ const Search = () => {
     };
     return (
         <div className='search rounded-xl bg-blue-900 mx-2 mt-2'>
-            <div className="searchForm">
-                <input  onChange={e => setUsername(e.target.value)} onKeyDown={handleKey} placeholder="Find a user" type="text" />
+            <div className="searchForm w-full">
+                <form onSubmit={handleSearch} >
+                  <div className="flex flex-row">
+                    <div>
+                    <input onChange={e => setUsername(e.target.value)}  placeholder="Find a user" type="text" />
+                    </div>
+                    <div>
+                    <button className="bg-slate-900 text-gray-200 px-1 rounded" >Search</button>
+                    </div>
+                  </div>
+                
+                
+                </form>
             </div>
-            {err && <span>User not found!</span>}
+            {err && <span className="text-white">User not found!</span>}
            {user &&  <div className="userChat" onClick={handleSelect}>
                 <img src={user.photoURL} alt="" />
                 <div className="userChatInfo">

@@ -32,9 +32,9 @@ const Login = () => {
 
         <div className='login'>
             
-            <div className='text-center text-4xl text-gray-700  heading '>
+            <div className='text-center   heading '>
             <img className='h-24 w-24' src={messenger} alt="" />
-            <p >Connect with your friends</p>
+            <p className='text-4xl text-gray-700' >Connect with your friends</p>
             </div>
            
             <div className="formContainer ">
